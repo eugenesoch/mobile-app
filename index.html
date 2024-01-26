@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A mobile shopping list app, developed as a project on Scrimba">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Eugene Soch">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App | Eugene Soch, Front-End Developer</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/x-icon" href="./assets/favicon_32x32.png">
+    <link rel="apple-touch-icon" href="./assets/webclip-256x256.png">
+    <link href="./assets/css/fontawesome.css" rel="stylesheet">
+    <link href="./assets/css/brands.css" rel="stylesheet">
+    <link href="./assets/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="main-wrapper">
+            <div class="app-window">
+                <img id="avatar" src="./assets/images/cat.png" alt="A picture of a cute cat sitting in shopping cart.">
+                <input type="text" id="input-field" onfocus="this.value=''" placeholder="Type in an item">
+                <button id="add-button">Add to cart</button>
+                <ul id="shopping-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js" type="module"></script>
+</body>
+</html>

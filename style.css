@@ -76,6 +76,7 @@ html[data-theme="dark"] {
     text-align: center;
     font-weight: 100;
     max-width: 20rem;
+    width: 100%;
 }
 
 #avatar {

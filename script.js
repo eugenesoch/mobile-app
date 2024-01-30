@@ -76,41 +76,23 @@ input.addEventListener("keypress", function(event) {
     }
   });
 
-// function appendItemToShoppingListEl(item) {
-//     let itemID = item[0]
-//     let itemValue = item[1]
-//     let newEl = document.createElement("li")
-//     newEl.textContent = itemValue
-//     shoppingListEl.append(newEl)
-//     newEl.addEventListener("dblclick", function() {
-//         let exactItemLocationInDB = ref(database, `shoppingList/${itemID}`)
-//         remove(exactItemLocationInDB)
-//     })
-// }
+let toggle = document.getElementById("theme-toggle");
+
+let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
 
 
-
-
-
-
-
-// let toggle = document.getElementById("theme-toggle");
-
-// let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-// if (storedTheme)
-//     document.documentElement.setAttribute('data-theme', storedTheme)
-
-
-// toggle.onclick = function() {
-//     let currentTheme = document.documentElement.getAttribute("data-theme");
-//     let targetTheme = "light";
-//     toggle.innerHTML = `<i class="fa-solid fa-sun">`
+toggle.onclick = function() {
+    let currentTheme = document.documentElement.getAttribute("data-theme");
+    let targetTheme = "light";
+    toggle.innerHTML = `<i class="fa-solid fa-sun">`
     
-//     if (currentTheme === "light") {
-//         targetTheme = "dark";
-//         toggle.innerHTML = `<i class="fa-solid fa-moon"></i>`
-//     }
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+        toggle.innerHTML = `<i class="fa-solid fa-moon"></i>`
+    }
 
-//     document.documentElement.setAttribute('data-theme', targetTheme)
-//     localStorage.setItem('theme', targetTheme);
-// };
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};

@@ -26,16 +26,17 @@ body {
 html[data-theme="light"] {
     --body: #f1ecff;
     --app-border: #2c283a;
-    --app-background-color: #EEF0F4;
+    --app-background-color: #f1faee;
     --input-color: #432000;
-    --input-background-color: #DCE1EB;
+    --input-background-color: #a8dadc;
     --button-color: #FDFDFD;
-    --button-color-hover: #432000;
-    --button-background-color: #AC485A;
-    --list-item-background-color: #FFFDF8;
-    --list-item-background-color-hover: #FFECC7;
+    --button-color-hover: #a91f2a;
+    --button-background-color: #e63946;
+    --list-item-background-color: #457b9d;
+    --list-item-background-color-hover: #2a4e64;
+    --list-item-text-color: #f1faee;
     --box-shadow-color: #00000030;
-    --body-color: #432000;
+    --body-color: #1d3557;
 
 }
 
@@ -75,7 +76,7 @@ html[data-theme="dark"] {
     padding: 3rem 2.5rem;
     text-align: center;
     font-weight: 100;
-    max-width: 18rem;
+    max-width: 17rem;
     width: 100%;
 }
 

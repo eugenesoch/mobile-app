@@ -76,8 +76,6 @@ html[data-theme="dark"] {
     padding: 3rem 2.5rem;
     text-align: center;
     font-weight: 100;
-    max-width: 17rem;
-    width: 100%;
 }
 
 #avatar {
@@ -144,3 +142,34 @@ li{
 li:hover{
     background-color: var(--list-item-background-color-hover);
 }
+
+/*Responsive Breakpoints*/
+
+@media only screen and (max-width: 480px) {
+    .app-window {
+        width: 12.5rem;
+    }
+  }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .app-window {
+        width: 18.75rem;
+    }
+  }
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .app-window {
+        width: 24rem;
+    }
+  }
+@media only screen and (min-width: 990px) and (max-width: 1280px) {
+    .app-window {
+        width: 24rem;
+    }
+  }
+@media only screen and (min-width: 1281px) {
+    .app-window {
+        width: 24rem;
+    }
+  }
+

@@ -62,9 +62,7 @@ html[data-theme="dark"] {
 
 }
 
-.main-wrapper {
-    padding: 0 1.5rem;
-}
+
 
 .app-window {
     display: flex;
@@ -148,7 +146,10 @@ li:hover{
 
 @media only screen and (max-width: 480px) {
     .app-window {
-        width: 12.5rem;
+        width: 16rem;
+    }
+    .main-wrapper {
+        padding: 0 0rem;
     }
   }
 
@@ -156,21 +157,33 @@ li:hover{
     .app-window {
         width: 18.75rem;
     }
+    .main-wrapper {
+        padding: 0 1.5rem;
+    }
   }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
     .app-window {
         width: 24rem;
     }
+    .main-wrapper {
+        padding: 0 1.5rem;
+    }
   }
 @media only screen and (min-width: 990px) and (max-width: 1280px) {
     .app-window {
         width: 24rem;
     }
+    .main-wrapper {
+        padding: 0 1.5rem;
+    }
   }
 @media only screen and (min-width: 1281px) {
     .app-window {
         width: 24rem;
+    }
+    .main-wrapper {
+        padding: 0 1.5rem;
     }
   }
 

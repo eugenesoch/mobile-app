@@ -22,8 +22,15 @@ addButtonEl.addEventListener("click", function() {
     } else {
         alert("Don't forget to add an item to a shopping list!")
     }
-
 })
+
+const input = document.getElementById("input-field")
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("add-button").click();
+  }
+});
 
 onValue(shoppingListInDB, function(snapshot) {
     // Challenge: Change the onValue code so that it uses snapshot.exists() to show items when there are items in the database and if there are not displays the text 'No items here... yet'.
@@ -69,30 +76,3 @@ function appendItemToShoppingListEl(item) {
     shoppingListEl.append(newEl)
 }
 
-input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      document.getElementById("add-button").click();
-    }
-  });
-
-let toggle = document.getElementById("theme-toggle");
-
-let storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-if (storedTheme)
-    document.documentElement.setAttribute('data-theme', storedTheme)
-
-
-toggle.onclick = function() {
-    let currentTheme = document.documentElement.getAttribute("data-theme");
-    let targetTheme = "light";
-    toggle.innerHTML = `<i class="fa-solid fa-sun">`
-    
-    if (currentTheme === "light") {
-        targetTheme = "dark";
-        toggle.innerHTML = `<i class="fa-solid fa-moon"></i>`
-    }
-
-    document.documentElement.setAttribute('data-theme', targetTheme)
-    localStorage.setItem('theme', targetTheme);
-};

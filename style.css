@@ -62,9 +62,7 @@ p {
   align-items: center;
   background-color: var(--body);
 }
-.main-wrapper {
-  padding: 3rem 0;
-}
+
 
 .app-window {
   display: flex;
@@ -151,7 +149,7 @@ li:hover {
     width: 16rem;
   }
   .main-wrapper {
-    padding: 0 0rem;
+    padding: 4rem 0rem;
   }
 }
 
@@ -160,7 +158,7 @@ li:hover {
     width: 18.75rem;
   }
   .main-wrapper {
-    padding: 0 1.5rem;
+    padding: 4rem 1.5rem;
   }
 }
 
@@ -169,7 +167,7 @@ li:hover {
     width: 24rem;
   }
   .main-wrapper {
-    padding: 0 1.5rem;
+    padding: 4rem 1.5rem;
   }
 }
 @media only screen and (min-width: 990px) and (max-width: 1280px) {
@@ -177,7 +175,7 @@ li:hover {
     width: 24rem;
   }
   .main-wrapper {
-    padding: 0 1.5rem;
+    padding: 4rem 1.5rem;
   }
 }
 @media only screen and (min-width: 1281px) {
@@ -185,12 +183,13 @@ li:hover {
     width: 24rem;
   }
   .main-wrapper {
-    padding: 0 1.5rem;
+    padding: 4rem 1.5rem;
   }
 }
 .toggle-wrapper {
   display: flex;
   justify-content: flex-end;
+
 }
 /* The switch - the box around the slider */
 .switch {

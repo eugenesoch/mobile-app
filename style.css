@@ -250,3 +250,12 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+.credits {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 2rem 0;
+}
+.credits a {
+  color: var(--app-border);
+
+}

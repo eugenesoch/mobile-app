@@ -39,6 +39,7 @@ html[data-theme="light"] {
   --body-color: #1d3557;
 }
 
+
 html[data-theme="dark"] {
   --body: #2c283a;
   --app-border: #f1ecff;
@@ -51,6 +52,9 @@ html[data-theme="dark"] {
   --box-shadow-color: #00000030; /*to fix*/
 }
 
+p {
+  color: var(--app-border)
+}
 .page-wrapper {
   min-height: 100svh;
   display: flex;

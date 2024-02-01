@@ -57,6 +57,7 @@ html[data-theme="dark"] {
   justify-content: center;
   align-items: center;
   background-color: var(--body);
+  padding: 1.5rem 0;
 }
 
 .app-window {

@@ -63,7 +63,7 @@ p {
   background-color: var(--body);
 }
 .main-wrapper {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .app-window {
@@ -194,6 +194,7 @@ li:hover {
 }
 /* The switch - the box around the slider */
 .switch {
+  margin-top: -2rem;
   position: relative;
   display: inline-block;
   width: 60px;

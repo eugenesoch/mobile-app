@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;800&display=swap");
 
+@font-face {
+  font-family: FontAwesome;
+  src: url(/assets/webfonts/fa-regular-400.woff2);
+}
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--body-color);
@@ -14,7 +20,7 @@ body {
   --input-color: #200f00;
   --input-background-color: #a8dadc;
   --button-color: #fdfdfd;
-  --button-color-hover: #003D00;
+  --button-color-hover: #003d00;
   --button-background-color: #005700;
   --list-item-background-color: #4f648e;
   --list-item-background-color-hover: rgb(166, 0, 0);
@@ -30,7 +36,7 @@ html[data-theme="light"] {
   --input-color: #200f00;
   --input-background-color: #a8dadc;
   --button-color: #fdfdfd;
-  --button-color-hover: #003D00;
+  --button-color-hover: #003d00;
   --button-background-color: #005700;
   --list-item-background-color: #4f648e;
   --list-item-background-color-hover: rgb(166, 0, 0);
@@ -38,7 +44,6 @@ html[data-theme="light"] {
   --box-shadow-color: #00000030;
   --body-color: #1d3557;
 }
-
 
 html[data-theme="dark"] {
   --body: #2c283a;
@@ -53,7 +58,7 @@ html[data-theme="dark"] {
 }
 
 p {
-  color: var(--app-border)
+  color: var(--app-border);
 }
 .page-wrapper {
   min-height: 100svh;
@@ -62,7 +67,6 @@ p {
   align-items: center;
   background-color: var(--body);
 }
-
 
 .app-window {
   display: flex;
@@ -189,7 +193,6 @@ li:hover {
 .toggle-wrapper {
   display: flex;
   justify-content: flex-end;
-
 }
 /* The switch - the box around the slider */
 .switch {
@@ -221,9 +224,11 @@ li:hover {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 34px;
+  display: flex;
 }
 
 .slider:before {
+  color: var(--app-border);
   position: absolute;
   content: "";
   height: 26px;
@@ -234,6 +239,13 @@ li:hover {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "FontAwesome";
+  content: "";
+  font-weight: 900;
 }
 
 input:checked + .slider {
@@ -248,6 +260,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  content: "";
 }
 .credits {
   text-align: center;
@@ -256,5 +269,8 @@ input:checked + .slider:before {
 }
 .credits a {
   color: var(--app-border);
-
+}
+.slider-icon {
+  font-size: 1rem;
+  color: red;
 }

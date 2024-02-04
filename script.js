@@ -82,6 +82,36 @@ function appendItemToShoppingListEl(item) {
   shoppingListEl.append(newEl);
 }
 
+// let checkBoxEl = document.getElementById("check-box");
+// let toggle = document.getElementById("theme-toggle");
+
+// let storedTheme =
+//   localStorage.getItem("theme") ||
+//   (window.matchMedia("(prefers-color-scheme: dark)").matches
+//     ? "dark"
+//     : "light");
+// if (storedTheme)
+//   document.documentElement.setAttribute("data-theme", storedTheme);
+
+// checkBoxEl.addEventListener("change", (event) => {
+//   var currentTheme = document.documentElement.getAttribute("data-theme");
+//   var targetTheme = "light";
+//   if (event.currentTarget.checked) {
+//     if (currentTheme === "light") {
+//       targetTheme = "dark";
+//     }
+//     document.documentElement.setAttribute("data-theme", targetTheme);
+//     localStorage.setItem("theme", targetTheme);
+//   } else {
+//     if (currentTheme === "light") {
+//       targetTheme = "dark";
+//     }
+//     document.documentElement.setAttribute("data-theme", targetTheme);
+//     localStorage.setItem("theme", targetTheme);
+//   }
+// });
+
+
 let checkBoxEl = document.getElementById("check-box");
 let toggle = document.getElementById("theme-toggle");
 
@@ -90,23 +120,14 @@ let storedTheme =
   (window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
     : "light");
-if (storedTheme)
+if (storedTheme) {
   document.documentElement.setAttribute("data-theme", storedTheme);
+  // Set the checkbox state based on the theme
+  checkBoxEl.checked = storedTheme === "dark";
+}
 
 checkBoxEl.addEventListener("change", (event) => {
-  var currentTheme = document.documentElement.getAttribute("data-theme");
-  var targetTheme = "light";
-  if (event.currentTarget.checked) {
-    if (currentTheme === "light") {
-      targetTheme = "dark";
-    }
-    document.documentElement.setAttribute("data-theme", targetTheme);
-    localStorage.setItem("theme", targetTheme);
-  } else {
-    if (currentTheme === "light") {
-      targetTheme = "dark";
-    }
-    document.documentElement.setAttribute("data-theme", targetTheme);
-    localStorage.setItem("theme", targetTheme);
-  }
+  var targetTheme = event.currentTarget.checked ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", targetTheme);
+  localStorage.setItem("theme", targetTheme);
 });

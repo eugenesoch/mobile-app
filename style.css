@@ -4,7 +4,10 @@
   font-family: FontAwesome;
   src: url(/assets/webfonts/fa-regular-400.woff2);
 }
-
+@font-face {
+  font-family: FontAwesome;
+  src: url(/assets/webfonts/fa-sharp-solid-900.ttf);
+}
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -244,8 +247,8 @@ li:hover {
   justify-content: center;
   align-items: center;
   font-family: "FontAwesome";
+  font-weight: 400;
   content: "";
-  font-weight: 900;
 }
 
 input:checked + .slider {
@@ -260,6 +263,7 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+  font-weight: 900;
   content: "";
 }
 .credits {

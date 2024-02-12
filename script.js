@@ -40,7 +40,6 @@ input.addEventListener("keypress", function (event) {
 });
 
 onValue(shoppingListInDB, function (snapshot) {
-  // Challenge: Change the onValue code so that it uses snapshot.exists() to show items when there are items in the database and if there are not displays the text 'No items here... yet'.
   if (snapshot.exists()) {
     let itemsArray = Object.entries(snapshot.val());
 
@@ -81,36 +80,6 @@ function appendItemToShoppingListEl(item) {
   });
   shoppingListEl.append(newEl);
 }
-
-// let checkBoxEl = document.getElementById("check-box");
-// let toggle = document.getElementById("theme-toggle");
-
-// let storedTheme =
-//   localStorage.getItem("theme") ||
-//   (window.matchMedia("(prefers-color-scheme: dark)").matches
-//     ? "dark"
-//     : "light");
-// if (storedTheme)
-//   document.documentElement.setAttribute("data-theme", storedTheme);
-
-// checkBoxEl.addEventListener("change", (event) => {
-//   var currentTheme = document.documentElement.getAttribute("data-theme");
-//   var targetTheme = "light";
-//   if (event.currentTarget.checked) {
-//     if (currentTheme === "light") {
-//       targetTheme = "dark";
-//     }
-//     document.documentElement.setAttribute("data-theme", targetTheme);
-//     localStorage.setItem("theme", targetTheme);
-//   } else {
-//     if (currentTheme === "light") {
-//       targetTheme = "dark";
-//     }
-//     document.documentElement.setAttribute("data-theme", targetTheme);
-//     localStorage.setItem("theme", targetTheme);
-//   }
-// });
-
 
 let checkBoxEl = document.getElementById("check-box");
 let toggle = document.getElementById("theme-toggle");
